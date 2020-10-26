@@ -1,0 +1,152 @@
+.textRevealContract {
+	animation: textRevealContract 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+.textRevealExpand {
+	animation: textRevealExpand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+.textFocusIn {
+	animation: textFocusIn 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+.textFocusInContract {
+	animation: textFocusInContract 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation-delay: 1s;
+}
+.fadeInUp {
+	animation: fadeInUp 1s both;
+}
+.fadeInUpSm {
+	animation: fadeInUp 1s both;
+}
+.fadeInDown {
+	animation: fadeInUp 1s both;
+}
+.fadeIn {
+	animation: fadeIn 1s both;
+}
+.fadeInRight {
+	animation: fadeInRight 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+.fadeInLeft {
+	animation: fadeInLeft 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+.letterPopUp {
+	animation: letterPopUp 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+@keyframes textRevealContract {
+  0% {
+    letter-spacing: 1em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    letter-spacing: normal;
+    opacity: 1;
+  }
+}
+@keyframes textRevealExpand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes textFocusIn {
+  0% {
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+@keyframes textFocusInContract {
+  0% {
+    letter-spacing: .5em;
+    transform: translateZ(300px);
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateZ(12px);
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(60px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes fadeInUpSm {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes fadeInDown {
+  0% {
+    transform: translateY(-60px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeInLeft {
+  0% {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes fadeInRight {
+  0% {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes letterPopUp {
+  0% {
+    transform: translateY(0);
+    transform-origin: 50% 50%;
+    text-shadow: none;
+  }
+  100% {
+    transform: translateY(-50px);
+    transform-origin: 50% 50%;
+    text-shadow: 0 1px 0 #cccccc, 0 2px 0 #cccccc, 0 3px 0 #cccccc, 0 4px 0 #cccccc, 0 5px 0 #cccccc, 0 6px 0 #cccccc, 0 7px 0 #cccccc, 0 8px 0 #cccccc, 0 9px 0 #cccccc, 0 50px 30px rgba(0, 0, 0, 0.3);
+  }
+}
