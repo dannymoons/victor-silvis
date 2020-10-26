@@ -223,6 +223,11 @@ h1 {
     text-align: center;
     width: 100%;
 }
+@media only screen and (max-width:767px){
+  .section-title {
+    font-size:2rem;
+  }
+}
 /* .section-title:before,
 .section-title:after {
     content: '';
@@ -238,6 +243,8 @@ h1 {
 .static-logos {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
+  overflow: hidden;
 }
 .static-logo {
   height:50px;
@@ -444,6 +451,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 }
 section {
   position: relative;
+  overflow:hidden;
 }
 body {
   margin: 0;

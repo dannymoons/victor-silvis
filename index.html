@@ -67,6 +67,8 @@ Dan heb je communicatie, <strong>copy en content</strong> nodig die op een relev
 </div>
 </div>
   </section> -->
+  <main>
+
   <div class="hero-lg-home">
     <img src="public/assets/img/placeholders/placeholder-3.jpg" class="hero-bg-img" width="100" alt="">
     <div class="dark-overlay"></div>
@@ -151,7 +153,7 @@ Dan heb je communicatie, <strong>copy en content</strong> nodig die op een relev
     </div>
   </section>
 
-  <section class="grey-bg1 pb-120">
+  <!-- <section class="grey-bg1 pb-120">
     <div class="container">
       <div class="row">
         <div class="col-12">
@@ -169,37 +171,14 @@ Dan heb je communicatie, <strong>copy en content</strong> nodig die op een relev
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
   <section style="background:url('public/assets/img/placeholders/placeholder-3.jpg'); background-repeat:no-repeat; background-size:cover; background-attachment:fixed;">
     <div class="dark-overlay"></div>
+
     <div class="container py-60">
       <div class="row">
         <div class="col-12">
-          <!-- <ul id="slides">
-            <li class="slide showing">
-              <div class="slide-content">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                <p><strong>John Doe</strong></p>
-              </div>
-            </li>
-            <li class="slide">
-              <div class="slide-content">
-              <h3 class="slide-title">Show off your slide</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                <a href="#" class="btn btn-white btn">Read more</a>
-              </div>
-            </li>
-            <li class="slide">
-              <div class="slide-content">
-              <h3 class="slide-title">Show off your slide</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                <a href="#" class="btn btn-white btn">Read more</a>
-              </div>
-            </li>
-          </ul> --><div class="testimonial-slider">
+      <div class="testimonial-slider">
   <ul id="slides">
             <li class="slide showing">
               <div class="slide-content">
@@ -240,53 +219,6 @@ Dan heb je communicatie, <strong>copy en content</strong> nodig die op een relev
       </div>
     </div>
   </div>
-
-  </section>
-<script type="text/javascript">
-var controls = document.querySelectorAll('.controls');
-for(var i=0; i<controls.length; i++){
-    controls[i].style.display = 'inline-block';
-}
-var slides = document.querySelectorAll('#slides .slide');
-var currentSlide = 0;
-var slideInterval = setInterval(nextSlide,5000);
-
-function nextSlide(){
-    goToSlide(currentSlide+1);
-}
-function previousSlide(){
-    goToSlide(currentSlide-1);
-}
-function goToSlide(n){
-    slides[currentSlide].className = 'slide';
-    currentSlide = (n+slides.length)%slides.length;
-    slides[currentSlide].className = 'slide showing';
-}
-var playing = true;
-var pauseButton = document.getElementById('pause');
-
-function pauseSlideshow(){
-    playing = false;
-    clearInterval(slideInterval);
-}
-function playSlideshow(){
-    playing = true;
-    slideInterval = setInterval(nextSlide,5000);
-}
-pauseButton.onclick = function(){
-    if(playing){ pauseSlideshow(); }
-    else{ playSlideshow(); }
-};
-var next = document.getElementById('next');
-var previous = document.getElementById('previous');
-
-next.onclick = function(){
-    nextSlide();
-};
-previous.onclick = function(){
-    previousSlide();
-};
-</script>
 
   </section>
   <section class="black-bg py-120">
@@ -342,73 +274,52 @@ previous.onclick = function(){
     </div>
   </section>
 
-  <!-- <section class="py-120">
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <ul id="slides">
-            <li class="slide showing">
-              <img class="slide-img" src="public/assets/img/placeholders/placeholder-3.jpg" loading="lazy" alt="">
-              <div class="slide-overlay"></div>
-              <div class="slide-content">
-              <h3 class="slide-title">Show off your slide</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                <a href="#" class="btn btn-white btn">Read more</a>
-              </div>
-            </li>
-            <li class="slide">
-              <img class="slide-img" src="public/assets/img/placeholders/placeholder-4.jpg" loading="lazy" alt="">
-              <div class="slide-overlay"></div>
-              <div class="slide-content">
-              <h3 class="slide-title">Show off your slide</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                <a href="#" class="btn btn-white btn">Read more</a>
-              </div>
-            </li>
-            <li class="slide">
-              <img class="slide-img" src="public/assets/img/placeholders/placeholder-5.jpg" loading="lazy" alt="">
-              <div class="slide-overlay"></div>
-              <div class="slide-content">
-              <h3 class="slide-title">Show off your slide</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                <a href="#" class="btn btn-white btn">Read more</a>
-              </div>
-            </li>
-          </ul>
-          <span id="previous"><</span>
-          <span id="next">></span>
-        </div>
-      </div>
-    </div>
-  </section> -->
-
-  <!-- <script type="text/javascript">
-  var slides = document.querySelectorAll('#slides .slide');
-var currentSlide = 0;
-var slideInterval = setInterval(nextSlide,3000);
-
-function nextSlide() {
-    slides[currentSlide].className = 'slide';
-    currentSlide = (currentSlide+1)%slides.length;
-    slides[currentSlide].className = 'slide showing';
-}
-  </script>
-  <script type="text/javascript">
-    (function() {
-      var burger = document.querySelector('.burger-container'),
-        header = document.querySelector('.mobile-menu-2');
-
-      burger.onclick = function() {
-        header.classList.toggle('menu-opened');
-      }
-    }());
-  </script> -->
-
-  <main>
   </main>
+  <script type="text/javascript">
+  var controls = document.querySelectorAll('.controls');
+  for(var i=0; i<controls.length; i++){
+      controls[i].style.display = 'inline-block';
+  }
+  var slides = document.querySelectorAll('#slides .slide');
+  var currentSlide = 0;
+  var slideInterval = setInterval(nextSlide,5000);
+
+  function nextSlide(){
+      goToSlide(currentSlide+1);
+  }
+  function previousSlide(){
+      goToSlide(currentSlide-1);
+  }
+  function goToSlide(n){
+      slides[currentSlide].className = 'slide';
+      currentSlide = (n+slides.length)%slides.length;
+      slides[currentSlide].className = 'slide showing';
+  }
+  var playing = true;
+  var pauseButton = document.getElementById('pause');
+
+  function pauseSlideshow(){
+      playing = false;
+      clearInterval(slideInterval);
+  }
+  function playSlideshow(){
+      playing = true;
+      slideInterval = setInterval(nextSlide,5000);
+  }
+  pauseButton.onclick = function(){
+      if(playing){ pauseSlideshow(); }
+      else{ playSlideshow(); }
+  };
+  var next = document.getElementById('next');
+  var previous = document.getElementById('previous');
+
+  next.onclick = function(){
+      nextSlide();
+  };
+  previous.onclick = function(){
+      previousSlide();
+  };
+  </script>
   <footer>
   </footer>
 </body>
