@@ -37,7 +37,7 @@
 @media only screen and (max-width:767px) {
   .hero-lg-home {
     min-height:auto;
-    padding:60px 0px;
+    padding:90px 0px;
   }
 }
 .hero-bg-img {
@@ -60,6 +60,11 @@
   /* animation: fadeInUp 1s both;
   animation-delay: 1s; */
   position: relative;
+}
+@media only screen and (max-width:767px){
+  .hero-title-home {
+    font-size:2.5rem;
+  }
 }
 .hero-lg-home .hero-content {
   left:40%;
@@ -110,7 +115,8 @@
    }
 }
 .hero-btns-home a {
-  margin-right:10px;
+    margin-right:10px;
+    margin-top:5px;
 }
 .btn.btn-black {
   background:#000;
@@ -256,6 +262,14 @@ h1 {
 }
 .black-bg h2,.black-bg h3 {
   color:#fff;
+}
+.testi {
+  background-attachment:fixed;
+}
+@media only screen and (max-width:991px){
+  .testi {
+    background-attachment:inherit;
+  }
 }
 .testimonial-slider {
   position: relative;
@@ -618,7 +632,7 @@ background-color:#fff;
   transition: all 0.5s ease-out, background 1s ease-out;
   -webkit-transition-delay: 0.2s;
           transition-delay: 0.2s;
-  z-index: 1;
+  z-index: 999;
 }
 .mobile-logo-2 {
   position: absolute;

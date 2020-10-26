@@ -172,7 +172,7 @@ Dan heb je communicatie, <strong>copy en content</strong> nodig die op een relev
       </div>
     </div>
   </section> -->
-  <section style="background:url('public/assets/img/placeholders/placeholder-3.jpg'); background-repeat:no-repeat; background-size:cover; background-attachment:fixed;">
+  <section class="testi"style="background:url('public/assets/img/placeholders/placeholder-3.jpg'); background-repeat:no-repeat; background-size:cover;">
     <div class="dark-overlay"></div>
 
     <div class="container py-60">
@@ -275,6 +275,16 @@ Dan heb je communicatie, <strong>copy en content</strong> nodig die op een relev
   </section>
 
   </main>
+  <script type="text/javascript">
+(function(){
+  var burger = document.querySelector('.burger-container'),
+      header = document.querySelector('.mobile-menu-2');
+
+  burger.onclick = function() {
+      header.classList.toggle('menu-opened');
+  }
+}());
+</script>
   <script type="text/javascript">
   var controls = document.querySelectorAll('.controls');
   for(var i=0; i<controls.length; i++){
