@@ -211,7 +211,6 @@ padding:20px 40px;
   }
 }
 
-
 h1 {
   font-weight: 900!important;
 }
@@ -344,21 +343,6 @@ h1 {
   opacity: 1;
     z-index: 2;
 }
-/* .slide:nth-of-type(1) {
-    background: red;
-}
-.slide:nth-of-type(2) {
-    background: orange;
-}
-.slide:nth-of-type(3) {
-    background: green;
-}
-.slide:nth-of-type(4) {
-    background: blue;
-}
-.slide:nth-of-type(5) {
-    background: purple;
-} */
 @media only screen and (max-width:767px) {
   .slide-content {
     width:86%;
@@ -523,6 +507,92 @@ width:100%;
   }
 }
 
+.filter-list {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding:0;
+}
+.filter-list li {
+    margin: 0 1rem;
+    padding: 0.5rem 1rem;
+    display: inline-block;
+    cursor: pointer;
+    border-bottom:1px solid;
+}
+.filter-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.filter-item {
+  font-size:0.8rem;
+  background-color:#000;
+color:#fff;
+    display: none;
+    padding: .81rem 2rem;
+    text-align: center;
+margin:5px;
+}
+.filter-item {
+animation: fadeIn 0.5s;
+}
+/* .item:nth-child(1) { animation-delay: 1s;}
+.item:nth-child(1) { animation-delay: 1s;}
+.item:nth-child(1) { animation-delay: 1s;}
+.item:nth-child(1) { animation-delay: 1s;}
+.item:nth-child(1) { animation-delay: 1s;} */
+.show {
+    display: block;
+}
+@media only screen and (max-width:767px){
+  .filter-list {
+    display: block;
+  }
+  .filter-list li {
+    width:100%;
+    margin:0;
+  }
+  .filter-item {
+    font-size:.7rem;
+    padding:0.4rem;
+  }
+}
+
+.step-card {
+  background-color: #fff;
+  transition: 0.4s ease-in-out;
+    padding:40px;
+}
+
+@media only screen and (max-width:1200px){
+  .step-card {
+    padding:20px;
+  }
+}
+
+.step-card p {
+  margin-bottom:0px;
+}
+
+.step-card .step-nr {
+  color:#fff;
+  background-color:#000;
+  line-height: 1;
+  font-weight:700;
+  /* opacity:0.3; */
+  padding:5px;
+  position: absolute;
+  top:0px;
+  left:0px;
+}
+.step-card .step-title {
+  margin:10px 0 0;
+}
+.content-right {
+  display: flex;
+  justify-content: flex-end;
+}
 /******************************/
 
 :root {
@@ -1126,7 +1196,8 @@ justify-content: center;
   border: 0;
   -webkit-box-shadow: 0px 20px 0 rgba(0,0,0,0.16);
   box-shadow: 0 0px 20px 0 rgba(0,0,0,0.16);
-  transition: .4s ease-in-out;
+  transition: box-shadow .4s ease-in-out; /* IS DIT CROSSBROWSER?*/
+  -webkit-transition: -webkit-box-shadow .4s ease-in-out;
   overflow:hidden;
   animation: fadeIn 1s both;
 }
