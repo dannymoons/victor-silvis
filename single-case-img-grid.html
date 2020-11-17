@@ -40,10 +40,10 @@
   </div> -->
   <div class="case-header">
         <div class="case-img-grid">
-          <img class="img-grid-item"src="public/assets/img/placeholders/placeholder-1.jpg" loading="lazy"alt="">
-          <img class="img-grid-item"src="public/assets/img/placeholders/placeholder-2.jpg" loading="lazy"alt="">
-          <img class="img-grid-item"src="public/assets/img/placeholders/placeholder-3.jpg" loading="lazy"alt="">
-          <img class="img-grid-item"src="public/assets/img/placeholders/placeholder-4.jpg" loading="lazy"alt="">
+          <img id="case-featured-1"class="img-grid-item"src="public/assets/img/placeholders/placeholder-1.jpg" loading="lazy"alt="">
+          <img id="case-featured-2"class="img-grid-item"src="public/assets/img/placeholders/placeholder-2.jpg" loading="lazy"alt="">
+          <img id="case-featured-3"class="img-grid-item"src="public/assets/img/placeholders/placeholder-3.jpg" loading="lazy"alt="">
+          <img id="case-featured-4"class="img-grid-item"src="public/assets/img/placeholders/placeholder-4.jpg" loading="lazy"alt="">
         </div>
         <div class="case-header-content">
 <h1>This is the name of the case</h1>
@@ -54,60 +54,7 @@
         </div>
       </div>
 </section>
-<!-- <section class="grey-bg1 py-120">
-  <div class="container">
-    <div class="row">
-      <div class="col">
-        <a href="public/assets/img/placeholders/placeholder-4.jpg" class="glightbox">
-      <img src="public/assets/img/placeholders/placeholder-4.jpg" alt="image">
-  </a>
-      </div>
-    </div>
-  </div>
-</section>
 
-<script>
-    var lightbox = GLightbox();
-    lightbox.on('open', (target) => {
-        console.log("lightbox opened");
-    });
-    var lightboxDescription = GLightbox({
-        selector: '.glightbox2',
-    });
-    var lightboxVideo = GLightbox({
-        selector: '.glightbox3'
-    });
-    lightboxVideo.on('slide_changed', ({ prev, current }) => {
-        console.log("Prev slide", prev);
-        console.log("Current slide", current);
-
-        const { index, slide, player } = current;
-
-        if (player) {
-            if (!player.ready) {
-                player.on('ready', event => {
-                });
-            }
-
-            player.on('play', event => {
-                console.log("Started play");
-            });
-
-            player.on('volumechange', event => {
-                console.log("Volume change");
-            });
-
-            player.on('ended', event => {
-                console.log("Video ended");
-            });
-        }
-    });
-
-    var lightboxInlineIframe = GLightbox({
-        'selector': '.glightbox4'
-    });
-
-</script> -->
 
   <footer class="footer">
     <div class="container">
