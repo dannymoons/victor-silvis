@@ -162,19 +162,15 @@
   }
 }
 .hero-lg-boxed .hero-content {
-  max-width:700px;
-  position: relative;
+  left:40%;
+  max-width:700px;  position: relative;
 }
 .hero-md-boxed .hero-content {
   position: relative;
   margin: auto;
 
 }
-.hero-lg-boxed .hero-content {
-  left:40%;
-  max-width:700px;
-  position: absolute;
-}
+
 .hero-sub-boxed {
   color:#fff;
   line-height:1.4em;
@@ -445,7 +441,7 @@ h1 {
 .showing {
   transform: translateX(0);
   opacity: 1;
-    z-index: 2;
+  z-index: 2;
 }
 @media only screen and (max-width:767px) {
   .slide-content {
@@ -657,6 +653,8 @@ margin:5px;
 
 .show {
     opacity:1;
+    transition: .4s ease-in-out;
+
 }
 li:active, li:focus {
   opacity: 0.1;
