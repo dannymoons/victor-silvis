@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="nl" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="robots" content="noindex,nofollow" />
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://use.typekit.net/tyw2gkn.css">
+  <link rel="stylesheet" href="public/css/moonsio.css">
+  <link rel="stylesheet" href="public/css/moonsio-animations.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <title>services-sliders</title>
+</head>
+<style>
+  html,
+  body {
+    position: relative;
+    height: 100%;
+    overflow-x: hidden;
+  }
+  .swiper-container {
+    width: 100%;
+    height: 450px;
+  }
+  .service-slide-img {
+    border-radius: 20px;
+    height:100%;
+    object-fit: cover;
+    width:100%;
+  }
+.service-slide-img, .service-slide-content{
+  position: absolute;
+}
+.service-slide-content  {
+
+}
+.service-slide-title {
+  color:#fff;
+}
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+  .services-wrapper {
+
+  }
+  .services-slider {
+  z-index: 2;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 60px;
+}
+.services-slider .services-slider__wrap {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: start;
+  align-items: flex-start;
+  position: relative;
+  z-index: 2;
+}
+.services-slider .services-slider__wrap .swiper-slide {
+  width: 300px;
+  flex-shrink: 0;
+  opacity: 0;
+  height: 350px;
+  background: #fff;
+  border-radius: 20px;
+  pointer-events: none;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+.services-slider .services-slider__wrap .swiper-slide-active, .services-slider .services-slider__wrap .swiper-slide-prev, .services-slider .services-slider__wrap .swiper-slide-next {
+  opacity: 1;
+  pointer-events: auto;
+}
+.services-slider .services-slider__controls {
+  position: relative;
+  z-index: 12;
+}
+.services-slider .services-slider__controls .services-slider__pagination {
+  text-align: center;
+  margin-top: 50px;
+}
+.services-slider .services-slider__controls .services-slider__pagination .swiper-pagination-bullet {
+  width: 13px;
+  height: 10px;
+  display: inline-block;
+  background: #fff;
+  opacity: .2;
+  margin: 0 5px;
+  border-radius: 20px;
+  -webkit-transition: opacity .5s, background-color .5s, width .5s;
+  transition: opacity .5s, background-color .5s, width .5s;
+  -webkit-transition-delay: .5s, .5s, 0s;
+  transition-delay: .5s, .5s, 0s;
+}
+.services-slider .services-slider__controls .swiper-pagination-clickable .swiper-pagination-bullet {
+  cursor: pointer;
+}
+.services-slider .services-slider__controls .services-slider__pagination .swiper-pagination-bullet-active {
+  opacity: 1;
+  background: #ffffff;
+  width: 100px;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+.services-slider .services-slider__controls .services-slider__button-next, .services-slider .services-slider__controls .services-slider__button-prev {
+  position: absolute;
+  top: 50%;
+  width: 27px;
+  height: 44px;
+  margin-top: -22px;
+  z-index: 10;
+  cursor: pointer;
+  background-size: 27px 44px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.services-slider .services-slider__controls .services-slider__button-prev {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23007aff'%2F%3E%3C%2Fsvg%3E");
+  left: 10px;
+  right: auto;
+}
+.services-slider .services-slider__controls .services-slider__button-next {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23007aff'%2F%3E%3C%2Fsvg%3E");
+  right: 10px;
+  left: auto;
+}
+/* .services-slider .services-slider__controls .services-slider__button-prev:focus, .services-slider .services-slider__controls .services-slider__button-next:focus {
+  outline: none !important;
+} */
+</style>
+</head>
+
+<body>
+  <!-- Swiper -->
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="swiper-container image-services-slider">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img class="swiper-image" src="public/assets/img/placeholders/placeholder-3.jpg" loading="lazy" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img class="swiper-image" src="public/assets/img/placeholders/placeholder-5.jpg" loading="lazy" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img class="swiper-image" src="public/assets/img/placeholders/placeholder-1.jpg" loading="lazy" alt="">
+            </div>
+          </div>
+          <!-- Add Arrows -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="py-60">
+    <hr>
+  </div>
+  <!-- Swiper -->
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="client-carousel">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img class="client-logo" src="public/assets/img/placeholders/placeholder-1.jpg" loading="lazy" alt=""></div>
+            <div class="swiper-slide"><img class="client-logo" src="public/assets/img/placeholders/placeholder-2.jpg" loading="lazy" alt=""></div>
+            <div class="swiper-slide"><img class="client-logo" src="public/assets/img/placeholders/placeholder-3.jpg" loading="lazy" alt=""></div>
+            <div class="swiper-slide"><img class="client-logo" src="public/assets/img/placeholders/placeholder-4.jpg" loading="lazy" alt=""></div>
+            <div class="swiper-slide"><img class="client-logo" src="public/assets/img/placeholders/placeholder-5.jpg" loading="lazy" alt=""></div>
+            <div class="swiper-slide"><img class="client-logo" src="public/assets/img/placeholders/placeholder-5.jpg" loading="lazy" alt=""></div>
+            <div class="swiper-slide"><img class="client-logo" src="public/assets/img/placeholders/placeholder-4.jpg" loading="lazy" alt=""></div>
+            <div class="swiper-slide"><img class="client-logo" src="public/assets/img/placeholders/placeholder-3.jpg" loading="lazy" alt=""></div>
+            <div class="swiper-slide"><img class="client-logo" src="public/assets/img/placeholders/placeholder-2.jpg" loading="lazy" alt=""></div>
+            <div class="swiper-slide"><img class="client-logo" src="public/assets/img/placeholders/placeholder-1.jpg" loading="lazy" alt=""></div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div class="py-60 grey-bg1">
+  <div class="services-wrapper">
+      <div class="services-slider">
+          <div class="services-slider__wrap swiper-wrapper">
+              <div class="swiper-slide">
+                <img class="service-slide-img" src="public/assets/img/placeholders/placeholder-1.jpg" loading="lazy" alt="">
+                <div class="service-slide-content">
+
+                <h3 class="service-slide-title">Tournedos met kaas</h3>
+                <a class="btn btn-white service-slide-btn"href="#">Bestellen</a>
+              </div>
+
+              </div>
+              <div class="swiper-slide">
+                <img class="service-slide-img" src="public/assets/img/placeholders/placeholder-1.jpg" loading="lazy" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img class="service-slide-img" src="public/assets/img/placeholders/placeholder-2.jpg" loading="lazy" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img class="service-slide-img" src="public/assets/img/placeholders/placeholder-3.jpg" loading="lazy" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img class="service-slide-img" src="public/assets/img/placeholders/placeholder-4.jpg" loading="lazy" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img class="service-slide-img" src="public/assets/img/placeholders/placeholder-5.jpg" loading="lazy" alt="">
+              </div>
+          </div>
+          <div class="services-slider__controls">
+              <div class="services-slider__pagination"></div>
+              <div class="services-slider__button-next"></div>
+              <div class="services-slider__button-prev"></div>
+          </div>
+      </div>
+  </div>
+</div>
+<script type="text/javascript">
+var swiper = new Swiper('.services-slider', {
+  slidesPerView: 1,
+  spaceBetween: 30,
+  grabCursor: true,
+  speed: 500,
+  pagination: {
+    el: '.services-slider__pagination',
+    clickable: true,
+  },
+  navigation: {
+    nextEl: '.services-slider__button-next',
+    prevEl: '.services-slider__button-prev',
+  },
+});
+</script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper('.client-carousel', {
+          slidesPerView: 5,
+      spaceBetween: 30,
+      slidesPerGroup: 5,
+      breakpoints: {
+        320: {
+          slidesPerView: 2,
+          spaceBetween: 10,
+          slidesPerGroup: 2
+        },
+        767: {
+          slidesPerView: 3,
+          spaceBetween: 30,
+          slidesPerGroup: 3
+        },
+        991: {
+          slidesPerView: 5,
+          spaceBetween: 30,
+          slidesPerGroup: 5
+        }
+      },
+      loop: true,
+      autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+      },
+
+    });
+  </script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var imageSwiper = new Swiper('.swiper-container', {
+      slidesPerView: 1,
+      loop: true,
+      effect: 'fade',
+      speed: 1000,
+
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+      },
+    });
+  </script>
+</body>
+
+</html>
