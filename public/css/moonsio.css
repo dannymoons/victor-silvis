@@ -800,7 +800,6 @@ input {
   background-color: #000;
   font-weight: bold;
   cursor: pointer;
-  /* Icon */
 }
 .toggle-tab-label-1:hover {
   background-color: #000;
@@ -823,15 +822,7 @@ height:0;
   -webkit-transition: .4s ease-out;
   transition: .4s ease-out;
 }
-/* .tab-close {
-  display: -webkit-box;
-  display: flex;
-  justify-content: flex-end;
-  padding: 20px;
-  font-size: 0.75em;
-  background: #000;
-  cursor: pointer;
-} */
+
 .toggle-tab-close-1:hover {
   background: #000;
 }
@@ -848,7 +839,10 @@ input:checked ~ .toggle-tab-content-1 {
   max-height: 100%;
   padding: 20px;
 }
-
+.faq-schema p {
+  margin:0;
+  padding:0;
+}
 /******************************/
 
 :root {

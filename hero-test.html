@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="nl" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="robots" content="noindex,nofollow" />
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://use.typekit.net/tyw2gkn.css">
+  <link rel="stylesheet" href="public/css/moonsio.css">
+  <link rel="stylesheet" href="public/css/moonsio-animations.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+  <title>Victor Silvis</title>
+</head>
+
+<body>
+  <div class="navbar-style-3">
+    <div class="navigation-links flex-end">
+  <a class="nav-link"href="#">Home</a>
+  <a class="nav-link"href="#">Over mij</a>
+  <a class="nav-link"href="#">Werk</a>
+<a class="nav-link"href="#">Diensten</a>
+</div>
+
+<a class="logo-link"href="/">
+  <img src="public/assets/img/VictorSilvisConcept&Copy_Logo_transparant.png" loading="lazy" class="logo" alt="Victor Silvis Logo">
+</a>
+<div class="navigation-links flex-start">
+
+  <a class="nav-link"href="#">Werkwijze</a>
+  <a class="nav-link"href="#">Blog</a>
+  <a class="nav-link"href="#">Contact</a>
+<a class="nav-link cta"href="#">Offerte</a>
+  </div>
+</div>
+  <!-- <div class="navbar inline-logo">
+    <div class="navigation-links">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Over mij</a></li>
+        <li><a href="#">Werk</a></li>
+        <li><a href="#">Diensten</a></li>
+      </ul>
+    </div>
+    <a href="/">
+      <img src="public/assets/img/VictorSilvisConcept&Copy_Logo_transparant.png" loading="lazy" class="logo" alt="Victor Silvis Logo">
+    </a>
+    <div class="navigation-links">
+      <ul>
+        <li><a href="#">Werkwijze</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+  </div> -->
+  <div class="mobile-menu-2">
+    <img class="mobile-logo-2" src="public/assets/img/VictorSilvisConcept&Copy_Logo_transparant.png" alt="">
+    <div class="burger-container">
+      <div id="burger">
+        <div class="bar topBar"></div>
+        <div class="bar centerBar"></div>
+        <div class="bar btmBar"></div>
+      </div>
+    </div>
+    <div class="icon icon-apple"></div>
+    <ul class="menu">
+      <li class="menu-item"><a href="#">Home</a></li>
+      <li class="menu-item"><a href="#">Over</a></li>
+      <li class="menu-item"><a href="#">Werk</a></li>
+      <li class="menu-item"><a href="#">Diensten</a></li>
+      <li class="menu-item"><a href="#">Werkwijze</a></li>
+      <li class="menu-item"><a href="#">Blog</a></li>
+      <li class="menu-item"><a href="#">Contact</a></li>
+    </ul>
+    <div class="shop icon icon-bag"></div>
+  </div>
+
+  <main>
+    <style media="screen">
+  
+      }
+    </style>
+  <div class="hero-lg-boxed">
+    <img src="public/assets/img/placeholders/placeholder-3.jpg" loading="lazy" class="hero-bg-img" height="100%" width="100%" alt="">
+    <div class="hero-content">
+      <h1 class="hero-title-boxed">Geef je verhaal vleugels</h1>
+      <p class="hero-intro-boxed">Meer omzet halen uit (nieuwe) klanten? Meer naamsbekendheid? Een sterk merk bouwen? Dan heb je <strong>communicatie, copy en content</strong> nodig die op een relevante, opvallende, en consistente manier vertelt waar
+        je voor gaat en staat. Corporates, MKB, scale ups: elk merk zit vol mooie verhalen. Helaas worden ze niet altijd goed en consequent verteld. Ik help je jouw authentieke verhaal te vinden, te verwoorden, te verbeelden en te verspreiden zodat
+        je klanten kunt verleiden en je merk duurzaam gaat groeien.
+      </p>
+      <div class="hero-btns-boxed">
+        <a href="#" class="btn btn-white">Over Victor</a>
+        <a href="#" class="btn btn-white">Werkwijze</a>
+      </div>
+    </div>
+  </div>
+
+
+  </main>
+  <script type="text/javascript">
+(function(){
+  var burger = document.querySelector('.burger-container'),
+      header = document.querySelector('.mobile-menu-2');
+
+  burger.onclick = function() {
+      header.classList.toggle('menu-opened');
+  }
+}());
+</script>
+  <script type="text/javascript">
+  // var controls = document.querySelectorAll('.controls');
+  // for(var i=0; i<controls.length; i++){
+  //     controls[i].style.display = 'inline-block';
+  // }
+  var slides = document.querySelectorAll('#slides .slide');
+  var currentSlide = 0;
+  var slideInterval = setInterval(nextSlide,5000);
+
+  function nextSlide(){
+      goToSlide(currentSlide+1);
+  }
+  function previousSlide(){
+      goToSlide(currentSlide-1);
+  }
+  function goToSlide(n){
+      slides[currentSlide].className = 'slide';
+      currentSlide = (n+slides.length)%slides.length;
+      slides[currentSlide].className = 'slide showing';
+  }
+  var playing = true;
+  var pauseButton = document.getElementById('pause');
+
+  function pauseSlideshow(){
+      playing = false;
+      clearInterval(slideInterval);
+  }
+  function playSlideshow(){
+      playing = true;
+      slideInterval = setInterval(nextSlide,5000);
+  }
+  pauseButton.onclick = function(){
+      if(playing){ pauseSlideshow(); }
+      else{ playSlideshow(); }
+  };
+  var next = document.getElementById('next');
+  var previous = document.getElementById('previous');
+
+  next.onclick = function(){
+      nextSlide();
+  };
+  previous.onclick = function(){
+      previousSlide();
+  };
+  </script>
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+      <div class="col-md-4">
+        <h4>Handige links</h4>
+        <ul class="footer-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/">Over</a></li>
+          <li><a href="/">Werk</a></li>
+          <li><a href="/">Diensten</a></li>
+          <li><a href="/">Werkwijze</a></li>
+          <li><a href="/">Blog</a></li>
+          <li><a href="/">Contact</a></li>
+<hr class="divider">
+<li><a href="/">Leveringsvoorwaarden</a></li>
+<li><a href="/">Privacyverklaring</a></li>
+<li><a href="/">Cookieverklaring</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+
+      </div>
+      <div class="col-md-4">
+        <h4>Contactgegevens</h4>
+        <ul class="footer-adress">
+<li><i class="fa fa-building"></i>Victor Silvis</li>
+<li><i class="fa fa-home"></i>Spaces, Vijzelstraat 68-78</li>
+<li><i class="fa fa-map-marker-alt"></i>1017 HL, Amsterdam</li>
+<li><i class="fa fa-envelope"></i><a href="mailto:victor@victorsilvis.nl">victor@victorsilvis.nl</a></li>
+<li><i class="fas fa-phone"></i><a href="tel:0651060037">06 51060037</a></li>
+<!-- <li><i class="fa fa-briefcase"></i>KvK nummer: 50630253</li> -->
+</ul>
+<a href="#"><i class="fab fa-linkedin fa-2x"></i></a>
+      </div>
+      </div>
+      <div class="row footer-credits">
+        <div class="col-sm-12">
+          © VictorSilvis 2021
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
