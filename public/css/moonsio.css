@@ -1,4 +1,8 @@
 /* VICTOR STYLING */
+
+.o-hidden {
+  overflow:hidden;
+}
 /* .hero-home {
   background-size: cover;
   background-repeat: no-repeat;
@@ -97,50 +101,8 @@
     line-height:1.8em;
   }
 } */
-/* SWIPER */
-.image-slider img {
-  height:100%;
-  width:100%;
-  object-fit: cover;
-}
-.image-slider .swiper-button-next,.image-slider .swiper-button-prev {
-  background: transparent;
-  color:#fff;
-  padding: 10px 20px;
-  transition: .2s ease-in-out;
-}
-.image-slider .swiper-button-next:hover,.image-slider .swiper-button-prev:hover {
-  background: rgba(255,255,255,.1);
-}
 
-.image-slider .swiper-button-next:after,.image-slider .swiper-button-prev:after {
-  font-size:20px;
-}
-.image-slider .swiper-image{
-filter:brightness(0.5);
-  -webkit-transform: scale(1);
-          transform: scale(1);
-          -webkit-transition: transform 1.5s ease-out,filter 0.5s;
-            transition: transform 1.5s ease-out,filter 0.5s;
 
-}
-.image-slider .swiper-slide.swiper-slide-active .swiper-image{
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-          filter:brightness(1);
-      }
-      .client-carousel {
-        position: relative;
-        /* height:100px; */
-        overflow:hidden;
-      }
-      .client-carousel .client-logo {
-        filter: saturate(0.05);
-        height:100px;
-        object-fit:cover;
-        transition: .4s ease-out;
-        width:100%;
-      }
 
       /* .client-carousel .swiper-slide.swiper-slide-active .client-logo {
 filter: saturate(1);
@@ -298,7 +260,8 @@ animation: ken-burns-out 4s 1 ease-in-out forwards;
   background:#eaeaea;
   color:#000;
 }
-.hover-box-2 {
+/* hoverbox --> staat in main css van theme */
+.hover-box-2, .hover-box-case {
   border-radius: 0px;
   background-color:#fff;
   -webkit-box-shadow: 0px 40px 0 rgba(0,0,0,0.26);
@@ -308,12 +271,12 @@ animation: ken-burns-out 4s 1 ease-in-out forwards;
   overflow: hidden;
   width: 100%;
 }
-.hover-box-2 .image-container {
+.hover-box-2 .image-container, .hover-box-case .image-container {
   overflow:hidden;
   position: relative;
   height:100%;
 }
-.hover-box-image-2 {
+.hover-box-image-2, .hover-box-image-case {
   border-radius: 0px;
   display: block;
   width: 100%;
@@ -322,10 +285,10 @@ animation: ken-burns-out 4s 1 ease-in-out forwards;
   transition: .4s ease-in-out;
   position: relative;
 }
-.hover-box-2:hover .hover-box-image-2 {
+.hover-box-2:hover .hover-box-image-2,.hover-box-case:hover .hover-box-image-case {
   transform: scale(1.1);
 }
-.hover-box-overlay-2 {
+.hover-box-overlay-2,.hover-box-overlay-case {
   position: absolute;
   border-radius: 0px;
   top: 0;
@@ -342,7 +305,7 @@ animation: ken-burns-out 4s 1 ease-in-out forwards;
   -ms-transform: translateY(50%);
   transform: translateY(50%);
 }
-.hover-box-2:hover .hover-box-overlay-2 {
+.hover-box-2:hover .hover-box-overlay-2,.hover-box-case:hover .hover-box-overlay-case {
   border-radius: 0px;
   opacity: 1;
   -moz-transform: translateY(0);
@@ -350,7 +313,7 @@ animation: ken-burns-out 4s 1 ease-in-out forwards;
   -ms-transform: translateY(0);
   transform: translateY(0);
 }
-.hover-box-content-2 {
+.hover-box-content-2,.hover-box-content-case  {
   color: #fff;
   position: absolute;
   text-align: left;
@@ -358,11 +321,11 @@ animation: ken-burns-out 4s 1 ease-in-out forwards;
   width:100%;
   height:100%;
 }
-.hover-box-text-2 {
+.hover-box-text-2,.hover-box-text-case {
   line-height:1.6;
   margin: 0 0 20px;
 }
-.hover-box-title-2 {
+.hover-box-title-2,.hover-box-title-case {
   font-family:"urw-form";
   transition-delay:1s;
   font-size:1rem;
@@ -371,7 +334,7 @@ animation: ken-burns-out 4s 1 ease-in-out forwards;
 padding:20px 40px;
 }
 @media only screen and (max-width:1199px) {
-  .hover-box-image-2 {
+  .hover-box-image-2,  .hover-box-image-case {
     height:300px;
   }
 }
@@ -426,16 +389,17 @@ h1 {
   background-color: #000;
   background:var(--almost-black-gradient);
 }
-.black-bg h2,.black-bg h3 {
+.black-bg h2,.black-bg h3, .black-bg p {
   color:#fff;
 }
+
 
 /* @media only screen and (max-width:991px){
   .testi {
     background-attachment:inherit;
   }
 } */
-.testimonial-slider {
+/* .testimonial-slider {
   position: relative;
 }
 #slides {
@@ -555,7 +519,9 @@ h1 {
   .controls {
     padding:8px 8px;
   }
-}
+} */
+
+
 /* .buttons{
   position: absolute;
   left: 0px;
@@ -604,6 +570,7 @@ h1 {
   padding:30px 0;
   text-align: center;
 }
+/* this is in the main theme css file */
 .container-fluid.case-header {
   padding:0;
 }
@@ -626,6 +593,11 @@ width:50%;
   height:350px;
   object-fit:cover;
 }
+.case-img-single {
+  width:50%;
+  padding:5px;
+position: relative;
+}
 .case-header-content {
   padding:90px 120px;
   width:50%;
@@ -635,7 +607,7 @@ width:50%;
     padding:60px 60px;
     width:60%;
   }
-  .case-img-grid  {
+  .case-img-grid,.case-img-single  {
     width:40%;
   }
   .case-img-grid .img-grid-item {
@@ -679,6 +651,7 @@ width:95%;
 max-width: 1140px;
   margin:auto;
 }
+/* ...... */
 .filter-list {
     display: flex;
     justify-content: center;
